@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import PostsPage from './pages/PostsPage'
 import PostDetailsPage from './pages/PostDetailsPage'
 import UserPage from './pages/UserPage'
+import CreatePostPage from './pages/CreatePostPage'
 import { useTheme } from './hooks/useTheme'
 
 export default function App() {
@@ -14,6 +15,8 @@ export default function App() {
       <main className="app-main">
         <Routes>
           <Route path="/" element={<PostsPage />} />
+          <Route path="/create" element={<CreatePostPage />} />
+
           <Route path="/posts/:id" element={<PostDetailsPage />} />
           <Route path="/users/:id" element={<UserPage />} />
           <Route
