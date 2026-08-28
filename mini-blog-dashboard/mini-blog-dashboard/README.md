@@ -2,7 +2,7 @@
 
 A blog dashboard for browsing posts, reading comments, and getting to know the people behind them. Built as a way to explore working with a real REST API in React — searching, paginating, and stitching together data from multiple endpoints into something that feels like an actual product.
 
-🔗 **Live site:** [react-dashboard-self-nine.vercel.app](https://react-dashboard-8vf91rs1t-adetoroadeniyi5-9775s-projects.vercel.app/)
+🔗 **Live site:** [react-dashboard-self-nine.vercel.app](https://react-dashboard-self-nine.vercel.app/)
 
 ## What it does
 
