@@ -1,44 +1,31 @@
-# The Daily Feed — Mini Blog Dashboard
+# The Daily Feed
 
-A React dashboard that consumes the [JSONPlaceholder](https://jsonplaceholder.typicode.com) REST API to browse posts, view authors, read comments, and search/paginate through content.
+A blog dashboard for browsing posts, reading comments, and getting to know the people behind them. Built as a way to explore working with a real REST API in React — searching, paginating, and stitching together data from multiple endpoints into something that feels like an actual product.
 
-## Project description
+🔗 **Live site:** [react-dashboard-self-nine.vercel.app](https://react-dashboard-8vf91rs1t-adetoroadeniyi5-9775s-projects.vercel.app/)
 
-Built for the React API Integration assignment. The app fetches posts, users, and comments from JSONPlaceholder and stitches them together into a readable blog experience: a searchable, paginated post feed, a details view with author info and comments, and a couple of bonus features (favorites, dark mode, per-author profile pages).
+## What it does
 
-## Technologies used
+- Browse a feed of posts, 10 at a time, with clean pagination controls
+- Search posts by title as you type
+- Click into any post to read the full thing, see who wrote it, and read the comments underneath
+- Tap an author's name to see their full profile and everything else they've written
+- Star your favorite posts — they stick around even after you close the tab
+- Switch between light and dark mode depending on your mood
+- Write and publish your own post from the "+ New post" button in the navbar
 
-- React 18 (functional components + hooks)
-- React Router v6
-- Axios for API requests
-- Vite as the build tool
-- Plain CSS (custom design system, no UI ## How to run the project
+## Tech stack
 
-## API used
+- **React** (functional components, hooks)
+- **React Router** for navigation between the feed, post details, author profiles, and the post composer
+- **Axios** for talking to the API
+- **Vite** for a fast dev/build setup
+- Hand-written CSS — no framework, just a custom design system built around a warm editorial look (serif headlines, monospace post numbers, a pine-green accent)
 
-[JSONPlaceholder](https://jsonplaceholder.typicode.com) — no API key required.
+Posts, comments, and author data come from [JSONPlaceholder](https://jsonplaceholder.typicode.com), a free public API. New posts submitted through the composer hit JSONPlaceholder's mock `POST` endpoint — it echoes back a realistic response but doesn't actually persist the post, which the app is upfront about on the confirmation screen.
 
-| Endpoint | Used for |
-|---|---|
-| `GET /posts` | Post feed |
-| `GET /posts/:id` | Single post |
-| `GET /posts/:id/comments` | Comments on a post |
-| `GET /users` | Author names in the feed |
-| `GET /users/:id` | Author details |
-| `GET /users/:id/posts` | A user's posts (profile page) |
-| `POST /posts` | Create post (bonus) |
-| `DELETE /posts/:id` | Delete post (bonus) |
+## Running it locally
 
-## Features implemented
-
-- **Posts feed** — card-based layout showing title, body excerpt, user ID, and post ID
-- **Search** — live filter by title as you type
-- **Post details** — full body, author card, and comments (`/posts/:id`)
-- **Author info** — real name/username/email pulled from `GET /users/:id`, shown in the feed and on the details page
-- **Loading states** — animated "Loading…" indicator on every async view
-- **Error handling** — friendly error messages with a **Retry** button on every fetch
-- **Pagination** — 10 posts per page with Previous / page numbers / Next
-- **Reusable components** — `Navbar`, `SearchBar`, `PostList`, `PostCard`, `PostDetails`, `CommentList`, `Loading`, `ErrorMessage`, `Pagination`
-- **Routing** — React Router with `/`, `/posts/:id`, and `/users/:id`
-- **Responsive layout** — single-column cards on mobile, multi-column grid on desktop
-
+```bash
+npm install
+npm run dev
